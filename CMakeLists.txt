@@ -243,7 +243,10 @@ else (UNIX) # Need to separate Fortran and C Code
    scalapack_install_library(scalapack)
    scalapack_install_library(scalapack-F)
 endif (UNIX)
-add_subdirectory(TESTING)
+
+if(BUILD_TESTING)
+  add_subdirectory(TESTING)
+endif()
 
 # --------------------------------------------------
 # CPACK Packaging 
